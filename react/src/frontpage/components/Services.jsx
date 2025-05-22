@@ -1,4 +1,7 @@
 import React from 'react'
+import { BsCart3 } from "react-icons/bs";
+import { MdOutlineGppGood, MdOutlineLocalOffer } from "react-icons/md";
+import { PiMedal } from "react-icons/pi";
 
 export default function Services() {
   return (
@@ -9,9 +12,7 @@ export default function Services() {
       <div className="col-lg-3 col-md-6 pb-3 pb-lg-0">
         <div className="icon-box d-flex">
           <div className="icon-box-icon pe-3 pb-3">
-            <svg className="cart-outline">
-              <use xlinkHref="#cart-outline" />
-            </svg>
+          <BsCart3 />
           </div>
           <div className="icon-box-content">
             <h4 className="card-title mb-1 text-capitalize text-dark">
@@ -24,9 +25,7 @@ export default function Services() {
       <div className="col-lg-3 col-md-6 pb-3 pb-lg-0">
         <div className="icon-box d-flex">
           <div className="icon-box-icon pe-3 pb-3">
-            <svg className="quality">
-              <use xlinkHref="#quality" />
-            </svg>
+          <PiMedal />
           </div>
           <div className="icon-box-content">
             <h4 className="card-title mb-1 text-capitalize text-dark">
@@ -39,9 +38,7 @@ export default function Services() {
       <div className="col-lg-3 col-md-6 pb-3 pb-lg-0">
         <div className="icon-box d-flex">
           <div className="icon-box-icon pe-3 pb-3">
-            <svg className="price-tag">
-              <use xlinkHref="#price-tag" />
-            </svg>
+          <MdOutlineLocalOffer />
           </div>
           <div className="icon-box-content">
             <h4 className="card-title mb-1 text-capitalize text-dark">
@@ -54,9 +51,7 @@ export default function Services() {
       <div className="col-lg-3 col-md-6 pb-3 pb-lg-0">
         <div className="icon-box d-flex">
           <div className="icon-box-icon pe-3 pb-3">
-            <svg className="shield-plus">
-              <use xlinkHref="#shield-plus" />
-            </svg>
+          <MdOutlineGppGood />
           </div>
           <div className="icon-box-content">
             <h4 className="card-title mb-1 text-capitalize text-dark">

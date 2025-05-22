@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Swiper from 'swiper'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi2'
 
 export default function Billboard() {
+  useEffect(() => {
+    const swiper = new Swiper('.main-swiper', {
+      modules: [Navigation],
+      navigation: {
+        nextEl: '.main-slider-button-next',
+        prevEl: '.main-slider-button-prev',
+      },
+      loop: true,
+    })
+
+    return () => {
+      swiper.destroy()
+    }
+  }, [])
+
   return (
     <div>
       <section
@@ -15,22 +35,10 @@ export default function Billboard() {
   }}
 >
   <div className="position-absolute end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next main-slider-button-next">
-    <svg
-      className="chevron-forward-circle d-flex justify-content-center align-items-center p-2"
-      width={80}
-      height={80}
-    >
-      <use xlinkHref="#alt-arrow-right-outline" />
-    </svg>
+  <HiOutlineChevronRight />
   </div>
   <div className="position-absolute start-0 ps-0 ps-xxl-5 ms-0 ms-xxl-5 swiper-prev main-slider-button-prev">
-    <svg
-      className="chevron-back-circle d-flex justify-content-center align-items-center p-2"
-      width={80}
-      height={80}
-    >
-      <use xlinkHref="#alt-arrow-left-outline" />
-    </svg>
+  <HiOutlineChevronLeft />
   </div>
   <div className="swiper main-swiper">
     <div className="swiper-wrapper d-flex align-items-center">
